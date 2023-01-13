@@ -1,10 +1,8 @@
 
 def isValidChessBoard(board):
-        # check for one black and one white king
         if "bking" not in board.values() or "wking" not in board.values():
             return False
 
-        # check for a maximum of 16 pieces per player
         black_pieces = 0
         white_pieces = 0
         for i in board.values():
@@ -14,8 +12,6 @@ def isValidChessBoard(board):
                 white_pieces += 1
         if black_pieces >= 17 or white_pieces >= 17:
             return False
-
-        # check for at most 8 pawns per player
 
         if sum(i == "bking" for i in board.values()) > 1 or sum(i == "wking" for i in board.values()) > 1:
             return False
