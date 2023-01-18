@@ -4,7 +4,7 @@ TEXT = {'agree': "Yes, I agree. That sounds fine to me.",
 
 import sys, pyperclip
 if len(sys.argv) < 2:
-    print('Usage: python mclip.py [keyphrase] - copy phrase text')
+    print('Usage: python3 mclip.py [keyphrase] - copy phrase text')
     sys.exit()
 
 keyphrase = sys.argv[1] 

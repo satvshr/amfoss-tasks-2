@@ -4,11 +4,11 @@ while True:
     name = input()
     if name == '':
         break
-    list = list + [name]
+    list += [name]
 print('The list consists of:')
 for i in list:
     if i == list[-1]:
-        print(' and '+ i, end='')
+        print(' and '+ i)
     elif i == list[-2]:
         print(i, end='') 
     else:
