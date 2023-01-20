@@ -10,7 +10,7 @@ for folderName, subfolders, filenames in os.walk('/home/satvshr/Desktop/'):
         filename = os.path.join(folderName,filename)
         print('FILES: ' + filename)
         print(os.path.getsize(filename)) 
-        if os.path.getsize(filename) > 1000000:
+        if os.path.getsize(filename) > 100000000:
             print("These are the files over 100mb:",os.path.join(folderName, filename))
 
 
