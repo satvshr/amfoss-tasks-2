@@ -19,7 +19,10 @@ for i in dirlist:
 '''    
     
 import re, os, shutil
-dirlist = os.listdir('/home/satvshr/Desktop/amfoss-tasks-2/pq10/gapsfill')
+path = '/home/satvshr/Desktop/amfoss-tasks-2/pq10/gapsfill/'
+a = path + "gaps003"
+f = open(a, 'w')
+dirlist = os.listdir(path)
 total = 0
 dir = []
 newdir = []
@@ -34,7 +37,7 @@ for i in range(total):
         v = a.replace(dir[i][-1], str(i+1))
         print(a)
         print(v)
-        shutil.move(('/home/satvshr/Desktop/amfoss-tasks-2/pq10/gapsfill/'+a), ('/home/satvshr/Desktop/amfoss-tasks-2/pq10/gapsfill/'+v))
+        shutil.move((path+a), (path+v))
         newdir.append(v)
         #dir[i][-1] = i
 print(newdir)
