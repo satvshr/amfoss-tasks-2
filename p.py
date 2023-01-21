@@ -1,23 +1,3 @@
-'''
-import re, os, shutil
-dirlist = os.listdir('/home/satvshr/Desktop/amfoss-tasks-2/pq10/gapsfill')
-total = 0
-dir = []
-newdir = []
-for i in dirlist:
-    total += 1
-    dir.append(i)
-dir.sort()
-object = re.compile(r'00[0-total]')
-z = 0
-for i in dirlist:
-    z += 1
-    with open(os.path.join('/home/satvshr/Desktop/amfoss-tasks-2/pq10/gapsfill', i), 'r+') as file:
-        a = str(file)
-        print(a[-30])
-
-'''    
-    
 import re, os, shutil
 dirlist = os.listdir('/home/satvshr/Desktop/amfoss-tasks-2/pq10/gapsfill')
 total = 0
@@ -41,11 +21,6 @@ print(newdir)
 
     
     
-
-
-
-
-
 
 
 
