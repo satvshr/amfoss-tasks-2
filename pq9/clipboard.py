@@ -1,3 +1,4 @@
+
 #! python3
 # mcb.pyw - Save and loads pieces of tet to the clipboards
 # Usage: py.exe mcb.pyw save <keyword> - Saves clipboard to keyword

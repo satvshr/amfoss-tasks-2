@@ -1,0 +1,33 @@
+1674464151729	geckodriver	INFO	Listening on 127.0.0.1:54891
+1674464152643	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileKbVy8U"
+Gtk-Message: 14:25:52.690: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+amdgpu: os_same_file_description couldn't determine if two DRM fds reference the same file description.
+If they do, bad things may happen!
+1674464153746	Marionette	INFO	Marionette enabled
+1674464153753	Marionette	INFO	Listening on port 38369
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 38369
+1674464154010	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKbVy8U/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1674464161559	Marionette	INFO	Stopped listening on port 38369
+1674464270839	geckodriver	INFO	Listening on 127.0.0.1:54661
+1674464271756	mozrunner::runner	INFO	Running command: "/snap/firefox/current/firefox.launcher" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilezlNFZz"
+Gtk-Message: 14:27:51.804: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+amdgpu: os_same_file_description couldn't determine if two DRM fds reference the same file description.
+If they do, bad things may happen!
+1674464272867	Marionette	INFO	Marionette enabled
+1674464272874	Marionette	INFO	Listening on port 46633
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Read port: 46633
+1674464273123	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezlNFZz/search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?dsh=S319532515%3A1674464056766622&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHdtX3Bvml_-FyqBY7PaK7Jwfl9pRR9hOLv4CbJ80gQEfce6mS-93ASgbiqak53Yv7QFogQlfw line 323 > injectedScript line 2 > eval line 3929 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?dsh=S319532515%3A1674464056766622&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHdtX3Bvml_-FyqBY7PaK7Jwfl9pRR9hOLv4CbJ80gQEfce6mS-93ASgbiqak53Yv7QFogQlfw line 323 > injectedScript line 2 > eval line 3929 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1674464372704	Marionette	INFO	Stopped listening on port 46633
