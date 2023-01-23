@@ -19,10 +19,10 @@ for link in soup.select('a'):  #extracting all the URLs found within a page’s 
     b = link.get('href')
     if '/gallery' in str(b):
         c = b.replace('/gallery/', '')
-        a = "https://i.imgur.com/" + c + ".jpg"
-        print(a)
+        a = "https://i.imgur.com/" + c + ".png"
         download = requests.get(a)
-        download_place = '/home/satvshr/Desktop/amfoss-tasks-2/pics'
+        download_place = '/home/satvshr/Desktop/pics/' + c + '.png'
+        print(download_place)
         with open(download_place, 'wb') as f:
             f.write(download.content)
 
