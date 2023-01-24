@@ -1,14 +1,8 @@
 from bs4 import BeautifulSoup
-import requests, sys, pyperclip
+import requests, sys
 if len(sys.argv) > 1:
     # Get address from command line.
     address = ' '.join(sys.argv[1:])
-
-# TODO: Get address from clipboard.
-
-else:
-    # Get address from clipboard.
-    address = pyperclip.paste()
 
 link = 'https://imgur.com/search?q=' + address
 print(link)
