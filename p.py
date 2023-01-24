@@ -1,28 +1,18 @@
-from bs4 import BeautifulSoup
-import requests, sys, pyperclip
-if len(sys.argv) > 1:
-    # Get address from command line.
-    address = ' '.join(sys.argv[1:])
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import random
 
-# TODO: Get address from clipboard.
 
-else:
-    # Get address from clipboard.
-    address = pyperclip.paste()
+driver = webdriver.Firefox(executable_path='/Users/keneudeh/Downloads/geckodriver')
+driver.get('https://play2048.co/')
 
-link = 'https://imgur.com/search?q=' + address
-print(link)
-res = requests.get(link) 
-soup = BeautifulSoup(res.text, 'html.parser')
+key_select = [Keys.UP, Keys.DOWN, Keys.LEFT, Keys.RIGHT]
 
-for link in soup.select('a'):  #extracting all the URLs found within a page’s <a> tags
-    b = link.get('href')
-    if '/gallery' in str(b):
-        c = b.replace('/gallery/', '')
-        a = "https://i.imgur.com/" + c + ".png"
-        download = requests.get(a)
-        download_place = '/home/satvshr/Desktop/pics/' + c + '.png'
-        print(download_place)
-        with open(download_place, 'wb') as f:
-            f.write(download.content)
+gameStatusElem = driver.find_element_by_css_selector('.game-container p')
+htmlElem = driver.find_element_by_css_selector('html')
 
+
+while gameStatusElem.text != 'Game over!':
+    
+    htmlElem.send_keys(key_select[random.randint(0, 3)])
+    gameStatusElem = driver.find_element_by_css_selector('.game-container p')
