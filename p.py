@@ -23,20 +23,8 @@ if len(sys.argv) == 4:
         else:
             break
     print(col_len)
-    for i in range(1, n+1):
-        for j in range(1, col_len+1):
-            sheet1.cell(row = i, column = j).value = sheet.cell(row = i, column = j).value
-            # insert all elements till nth row
-
-    for i in range(n+m+1, row_len+m+1): #, n+m+1+row_len-n #n+m+1, row_len+m+1
-        for j in range(1, col_len+1):
-            sheet1.cell(row = i, column = j).value = sheet.cell(row = i-m, column = j).value
-            # insert elements from (n+m)th row till ((n+m) + m)th row
-
-    for i in range(n+1, n+m+1):
-        for j in range(1, col_len+1):
-            sheet1.cell(row = i, column = j).value = None
-    open.save(doc)
+    print(sheet.max_row-1)
+    print(sheet.max_column-1)
 
 
 

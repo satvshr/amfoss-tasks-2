@@ -15,4 +15,4 @@ if len(sys.argv) == 2:
     wb.save('multiplyfoss.xlsx')
 
 else:
-    print("Format should be: python3 <your table name> <number of rows/columns you want>")
+    print("Format should be: python3 <your programme name> <number of rows/columns you want>")

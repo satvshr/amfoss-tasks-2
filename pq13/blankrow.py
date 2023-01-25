@@ -20,6 +20,8 @@ if len(sys.argv) == 4:
             col_len += 1
         else:
             break
+    #print(sheet.max_row)
+    #print(sheet.max_column)
     for i in range(1, n+1):
         for j in range(1, col_len+1):
             sheet1.cell(row = i, column = j).value = sheet.cell(row = i, column = j).value
@@ -34,6 +36,7 @@ if len(sys.argv) == 4:
         for j in range(1, col_len+1):
             sheet1.cell(row = i, column = j).value = None
     open.save(doc)
-
+else:
+    print("Format should be: python3 <your programme name> <rows you want before blank lines> <number of blank lines you want> <table name>")
 
 
