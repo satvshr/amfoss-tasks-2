@@ -1,7 +1,5 @@
 import openpyxl
 import os
-from openpyxl.utils import get_column_letter
-
 
 wb = openpyxl.Workbook()
 sheet = wb['Sheet']

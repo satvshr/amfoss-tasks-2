@@ -1,25 +1,36 @@
-import pyinputplus as pyip
-import random, time
+import random, time, re
 
-q = 10
-a = 0
-for no in range(1, q+1):
-    x = random.randint(0, 9)
-    y = random.randint(0, 9)
-    print('#%s: %s x %s = ' % (no, x, y))  
-    try:
-        z = pyip.inputInt(allowRegexes=['%d'], timeout=8, limit=3)    
-    except pyip.TimeoutException:
-        print('Out of time!')
-        continue
-    except pyip.RetryLimitException:
-        print('Out of tries!')
-        continue
-    if z == (x * y):
-        print('Correct!')
-        a += 1 
-    else:
-        print("Incorrect")
-        print("The correct answer was %d" % (x*y))
-    time.sleep(1) 
-print('Score: %d / %d' % (a, q))
+question = 10
+answer = 0
+for qno in range(question):
+    attempts = 0
+
+    num1 = random.randint(0,9)
+    num2 = random.randint(0,9)
+    prompt = f"{qno + 1}: {num1} * {num2}\n"
+    teacherRegex = re.compile(f'^{num1 * num2}$')
+    start = int(time.time())
+    #print(int(time.time()))
+    print(prompt)
+    answer = input()
+    while attempts < 3:
+        end = int(time.time())
+        #print(int(time.time()))
+        elapsedTime = end - start
+        if elapsedTime > 8:
+            print("Out of time!")
+            break
+        elif teacherRegex.search(answer) == None:
+            print("Incorrect!")
+            attempts += 1
+            answer = input()
+            if attempts == 3:
+                print("Out of tries!")
+
+        else:
+            print("Correct!")
+            answer += 1
+            break
+    time.sleep(1)
+
+print(f'You got {answer} / {question} correct!')
