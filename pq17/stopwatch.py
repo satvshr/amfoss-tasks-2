@@ -30,6 +30,7 @@ try:
         print(info)
         lapNum += 1
         clip += info
+        clip += '\n'
         lastTime = time.time() # reset the last lap time
 except KeyboardInterrupt:
     pyperclip.copy(clip)
