@@ -2,7 +2,7 @@
 
 ## Satvik Mishra
 
-**I am Satvik Mishra from Kolkata, currently a S1 student pursuing AI.**
+**I am Satvik Mishra from Kolkata, currently an S1 student pursuing AI.**
 **Tasks List**|**Description**|**Status**
 --------------|---------------|---------------
 [Chapter 1](https://github.com/satvshr/amfoss-tasks-2/blob/master/pq2.ipynb)|Ch 1 - Python Basics|Completed
