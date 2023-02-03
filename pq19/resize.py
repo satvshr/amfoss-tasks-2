@@ -1,5 +1,4 @@
 
-
 import os
 from PIL import Image
 
@@ -12,9 +11,7 @@ logoWidth, logoHeight = logoIm.size
 os.makedirs('withLogo', exist_ok=True)
 # Loop over all files in the working directory.
 for filename in os.listdir('/home/satvshr/Desktop/amfoss-tasks-2/pq19'):
-    if not (filename.lower().endswith('.png') or filename.lower().endswith('.jpg')
-            or filename.lower().endswith('.gif') or filename.lower().endswith('bmp')) \
-        or filename == LOGO_FILENAME:
+    if not (filename.lower().endswith('.png') or filename.lower().endswith('.jpg') or filename.lower().endswith('.gif') or filename.lower().endswith('bmp')):
         continue # skip non-image files and the logo file itself
 
     im = Image.open('/home/satvshr/Desktop/amfoss-tasks-2/pq19/' + filename)
@@ -30,16 +27,14 @@ for filename in os.listdir('/home/satvshr/Desktop/amfoss-tasks-2/pq19'):
             width = int((SQUARE_FIT_SIZE / height) * width)
             height = SQUARE_FIT_SIZE
 
-    # Resize the image.
-    print('Resizing %s...' % (filename))
-    im = im.resize((width, height))
+        # Resize the image.
+        im = im.resize((width, height))
+        imWidth, imHeight = im.size
 
-    # Add the logo if it fits properly in image.
-    imWidth, imHeight = im.size
     if imWidth < logoWidth * 2 and imHeight < logoHeight * 2:
-        print("Logo taking up too much space in image so skipped..")
+        print("Logo taking up too much space")
+    
     else:
-        print('Adding logo to %s...' % (filename))
         im.paste(logoIm, (width - logoWidth, height - logoHeight), logoIm)
 
     # Save changes.
