@@ -11,7 +11,7 @@ logoWidth, logoHeight = logoIm.size
 os.makedirs('withLogo', exist_ok=True)
 # Loop over all files in the working directory.
 for filename in os.listdir('/home/satvshr/Desktop/amfoss-tasks-2/pq19'):
-    if not (filename.lower().endswith('.png') or filename.lower().endswith('.jpg') or filename.lower().endswith('.gif') or filename.lower().endswith('bmp')):
+    if not (filename.lower().endswith('.png') or filename.lower().endswith('.jpg') or filename.lower().endswith('.gif') or filename.lower().endswith('.bmp')):
         continue # skip non-image files and the logo file itself
 
     im = Image.open('/home/satvshr/Desktop/amfoss-tasks-2/pq19/' + filename)
